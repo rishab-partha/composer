@@ -2062,6 +2062,8 @@ class Trainer:
                     metric,
                 )
 
+        # Test interactive
+
     def _run_evaluators(self, event: Event):
         """Runs evaluators periodically during training."""
         for evaluator in self.state.evaluators:

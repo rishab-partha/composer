@@ -1,0 +1,6 @@
+#!/mnt/workdisk/rishab/composer/my_venv/bin/python3
+
+from deepspeed.launcher.runner import main
+
+if __name__ == '__main__':
+    main()
