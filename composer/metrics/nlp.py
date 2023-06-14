@@ -7,7 +7,8 @@ import re
 import string
 import types
 from typing import Any, Dict, List, Mapping, Union
-
+from transformers import AutoTokenizer
+from composer.datasets.in_context_learning_evaluation import get_icl_task_dataloader
 import torch
 from torch import Tensor
 from torch.nn import functional as F
@@ -517,56 +518,88 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
         del labels  # never used
         num_beams = batch['generation_kwargs']['num_beams']
         processed_outputs = [outputs[i * num_beams:(i + 1) * num_beams] for i in range(batch['input_ids'].shape[0])]
-        for sample_outputs, sample_prompt, test_inputs, test_outputs, entry_point in zip(
-                processed_outputs, batch['prompts'], batch['test_inputs'], batch['test_outputs'],
+        for sample_outputs, sample_prompt, test, test_inputs, test_outputs, entry_point in zip(
+                processed_outputs, batch['prompts'], batch['tests'], batch['test_inputs'], batch['test_outputs'],
                 batch['entry_points']):
             self.total += torch.tensor(1.0)
             for code_gen in sample_outputs:
-                code_gen = re.split(r'\ndef|\nclass|\n#|\nif|\nprint', code_gen)[0]
+                print("Code gen: ", code_gen)
+                code_gen = re.split(r'\ndef|\nclass|\n#|\nif|\nprint|\nComplete', code_gen)[0]
+                print("Final code gen: ", code_gen)
                 final_code = sample_prompt + code_gen
                 passes_all = True
-                for test_input, test_output in zip(test_inputs, test_outputs):
-                    if remote:
-                        self.update_online_helper(final_code, test_input, test_output, entry_point)
-                    else:
-                        ret = multiprocessing.Value('b', 0)
-                        p = multiprocessing.Process(target=self.update_offline_helper,
-                                                    args=(final_code, test_input, test_output, entry_point, ret))
-                        p.start()
-                        p.join(TIMEOUT)
-                        p.terminate()
-                        if not bool(ret.value):
-                            passes_all = False
-                            break
+                if remote:
+                    self.update_online_helper(final_code, test_inputs, test_outputs, entry_point)
+                else:
+                    ret = multiprocessing.Value('b', 0)
+                    print(test)
+                    print("reached metric")
+                    p = multiprocessing.Process(target=self.update_offline_helper,
+                                                args=(final_code, test_inputs[0], test_outputs[0], test, entry_point, ret))
+                    p.start()
+                    p.join(TIMEOUT)
+                    p.terminate()
+                    print("finished metric")
+                    if not bool(ret.value):
+                        passes_all = False
+                # for test_input, test_output in zip(test_inputs, test_outputs):
+                #     if remote:
+                #         self.update_online_helper(final_code, test_input, test_output, entry_point)
+                #     else:
+                #         ret = multiprocessing.Value('b', 0)
+                #         print(test_input, test_output)
+                #         print("reached metric")
+                #         p = multiprocessing.Process(target=self.update_offline_helper,
+                #                                     args=(final_code, test_input, test_output, test, entry_point, ret))
+                #         p.start()
+                #         p.join(TIMEOUT)
+                #         p.terminate()
+                #         print("finished metric")
+                #         if not bool(ret.value):
+                #             passes_all = False
+                #             break
 
                 if passes_all:
                     self.correct += torch.tensor(1.0)
                     break
 
-    def update_offline_helper(self, code_gen: str, test_input: str, test_output: str, entry_point: str,
+    def update_offline_helper(self, code_gen: str, test_input: str, test_output: str, test: str, entry_point: str,
                               val: multiprocessing.Value):  # type: ignore
         mod = types.ModuleType('test_module')
         val.value = 0
         result = None
         expected_result = None
+
         try:
             exec(code_gen, mod.__dict__)
-
-            result = mod.__dict__[entry_point](*eval(test_input))
-            syntax_compiled = True
-            try:
-                expected_result = eval(test_output)
-            except:
-                expected_result = test_output
-
-        except Exception as _:
-            #print(str(e))
-            syntax_compiled = False
-
-        if syntax_compiled:
-            val.value = int(result == expected_result)
-        else:
+            exec(test, mod.__dict__)
+            mod.__dict__["check"](mod.__dict__[entry_point])
+            val.value = 1
+        except:
             val.value = 0
+        # try:
+        #     print("before exec")
+        #     exec(code_gen, mod.__dict__)
+        #     print("after exec")
+        #     result = mod.__dict__[entry_point](*eval(test_input))
+        #     print("after eval1")
+        #     syntax_compiled = True
+        #     try:
+        #         print("before eval2")
+        #         expected_result = eval(test_output)
+        #         print("after eval2")
+
+        #     except:
+        #         expected_result = test_output
+
+        # except Exception as _:
+        #     #print(str(e))
+        #     syntax_compiled = False
+
+        # if syntax_compiled:
+        #     val.value = int(result == expected_result)
+        # else:
+        #     val.value = 0
 
     def update_online_helper(self, code_gen: str, test_input: str, test_output: str, entry_point: str):
         pass
@@ -575,3 +608,4 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
         assert isinstance(self.correct, Tensor)
         assert isinstance(self.total, Tensor)
         return self.correct / self.total
+    

@@ -992,7 +992,6 @@ class InContextLearningCodeEvalDataset(Dataset):
             entry_points.append(entry_point)
             test_inputs.append(test_input)
             test_outputs.append(test_output)
-
         batch = {
             'input_ids': torch.stack(inputs),
             'mode': 'generate',
@@ -1010,6 +1009,7 @@ class InContextLearningCodeEvalDataset(Dataset):
                 'num_return_sequences': self.num_evals,  # how many gens per prompt
                 #'stopping_criteria': transformers.StoppingCriteriaList([InContextLearningCodeEvalStoppingCriteria(self.tokenizer)]),  # stopping criteria
                 'do_sample': True,
+                #'eos_token_id': self.tokenizer.eos_token_id,
                 'top_p': 0.95,
                 'use_cache': True,
             }

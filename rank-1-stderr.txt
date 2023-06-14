@@ -1,0 +1,170 @@
+Found cached dataset json (/root/.cache/huggingface/datasets/json/default-914290af019ebe6f/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51)
+Loading cached processed dataset at /root/.cache/huggingface/datasets/json/default-914290af019ebe6f/0.0.0/0f7e3662623656454fcd2b650f34e886a7db4b9104504885bd462096cc7a9f51/cache-21ae647683427c17.arrow
+  0%|          | 0/164 [00:00<?, ?it/s]100%|██████████| 164/164 [00:00<00:00, 1674.03it/s]
+Explicitly passing a `revision` is encouraged when loading a configuration with custom code to ensure no malicious code has been contributed in a newer revision.
+Explicitly passing a `revision` is encouraged when loading a model with custom code to ensure no malicious code has been contributed in a newer revision.
+Downloading (…)main/modeling_mpt.py:   0%|          | 0.00/18.4k [00:00<?, ?B/s]Downloading (…)main/modeling_mpt.py: 100%|██████████| 18.4k/18.4k [00:00<00:00, 3.38MB/s]
+Downloading shards:   0%|          | 0/2 [00:00<?, ?it/s]
+Downloading (…)l-00001-of-00002.bin:   0%|          | 0.00/9.94G [00:00<?, ?B/s][A
+Downloading (…)l-00001-of-00002.bin:   0%|          | 10.5M/9.94G [00:01<31:14, 5.30MB/s][A
+Downloading (…)l-00001-of-00002.bin:   0%|          | 21.0M/9.94G [00:02<20:16, 8.16MB/s][A
+Downloading (…)l-00001-of-00002.bin:   0%|          | 31.5M/9.94G [00:03<17:33, 9.41MB/s][A
+Downloading (…)l-00001-of-00002.bin:   0%|          | 41.9M/9.94G [00:05<19:14, 8.57MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 52.4M/9.94G [00:06<19:39, 8.38MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 62.9M/9.94G [00:07<19:43, 8.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 73.4M/9.94G [00:08<19:42, 8.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 83.9M/9.94G [00:10<19:40, 8.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 94.4M/9.94G [00:11<19:37, 8.36MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 105M/9.94G [00:12<19:28, 8.42MB/s] [A
+Downloading (…)l-00001-of-00002.bin:   1%|          | 115M/9.94G [00:13<19:07, 8.56MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|▏         | 126M/9.94G [00:15<19:36, 8.34MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|▏         | 136M/9.94G [00:16<19:53, 8.22MB/s][A
+Downloading (…)l-00001-of-00002.bin:   1%|▏         | 147M/9.94G [00:17<19:29, 8.38MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 157M/9.94G [00:18<18:58, 8.60MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 168M/9.94G [00:19<18:30, 8.81MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 178M/9.94G [00:21<18:05, 8.99MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 189M/9.94G [00:22<17:48, 9.13MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 199M/9.94G [00:23<17:36, 9.22MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 210M/9.94G [00:24<17:26, 9.30MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 220M/9.94G [00:25<18:33, 8.73MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 231M/9.94G [00:26<18:45, 8.63MB/s][A
+Downloading (…)l-00001-of-00002.bin:   2%|▏         | 241M/9.94G [00:28<18:28, 8.75MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 252M/9.94G [00:29<18:03, 8.95MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 262M/9.94G [00:30<17:40, 9.12MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 273M/9.94G [00:31<17:23, 9.27MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 283M/9.94G [00:32<17:09, 9.38MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 294M/9.94G [00:33<17:00, 9.46MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 304M/9.94G [00:34<17:02, 9.43MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 315M/9.94G [00:36<18:10, 8.83MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 325M/9.94G [00:37<18:14, 8.79MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 336M/9.94G [00:38<17:54, 8.94MB/s][A
+Downloading (…)l-00001-of-00002.bin:   3%|▎         | 346M/9.94G [00:39<17:31, 9.12MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▎         | 357M/9.94G [00:40<17:10, 9.31MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▎         | 367M/9.94G [00:41<16:51, 9.47MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 377M/9.94G [00:42<16:39, 9.57MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 388M/9.94G [00:43<16:29, 9.65MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 398M/9.94G [00:44<17:03, 9.33MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 409M/9.94G [00:46<17:47, 8.93MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 419M/9.94G [00:47<18:10, 8.73MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 430M/9.94G [00:49<21:53, 7.24MB/s][A
+Downloading (…)l-00001-of-00002.bin:   4%|▍         | 440M/9.94G [00:51<24:00, 6.60MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▍         | 451M/9.94G [00:53<25:21, 6.24MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▍         | 461M/9.94G [00:55<26:14, 6.02MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▍         | 472M/9.94G [00:57<26:22, 5.99MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▍         | 482M/9.94G [00:58<25:33, 6.17MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▍         | 493M/9.94G [01:00<25:27, 6.19MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▌         | 503M/9.94G [01:01<24:46, 6.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▌         | 514M/9.94G [01:03<23:46, 6.61MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▌         | 524M/9.94G [01:04<22:52, 6.86MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▌         | 535M/9.94G [01:06<22:11, 7.06MB/s][A
+Downloading (…)l-00001-of-00002.bin:   5%|▌         | 545M/9.94G [01:07<21:42, 7.21MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 556M/9.94G [01:08<21:17, 7.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 566M/9.94G [01:10<20:45, 7.53MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 577M/9.94G [01:11<20:01, 7.79MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 587M/9.94G [01:12<20:40, 7.54MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 598M/9.94G [01:14<20:20, 7.66MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 608M/9.94G [01:15<19:41, 7.90MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▌         | 619M/9.94G [01:16<19:03, 8.16MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▋         | 629M/9.94G [01:17<18:31, 8.38MB/s][A
+Downloading (…)l-00001-of-00002.bin:   6%|▋         | 640M/9.94G [01:18<18:09, 8.54MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 650M/9.94G [01:20<17:53, 8.66MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 661M/9.94G [01:21<17:39, 8.76MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 671M/9.94G [01:22<17:48, 8.68MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 682M/9.94G [01:23<18:38, 8.28MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 692M/9.94G [01:25<18:31, 8.32MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 703M/9.94G [01:26<18:07, 8.50MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 713M/9.94G [01:27<17:42, 8.69MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 724M/9.94G [01:28<17:19, 8.87MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 734M/9.94G [01:29<17:04, 8.99MB/s][A
+Downloading (…)l-00001-of-00002.bin:   7%|▋         | 744M/9.94G [01:30<16:51, 9.10MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 755M/9.94G [01:31<16:41, 9.17MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 765M/9.94G [01:33<17:19, 8.83MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 776M/9.94G [01:34<17:52, 8.55MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 786M/9.94G [01:35<17:41, 8.62MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 797M/9.94G [01:36<17:19, 8.80MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 807M/9.94G [01:38<16:56, 8.99MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 818M/9.94G [01:39<16:37, 9.15MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 828M/9.94G [01:40<16:23, 9.27MB/s][A
+Downloading (…)l-00001-of-00002.bin:   8%|▊         | 839M/9.94G [01:41<16:13, 9.35MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▊         | 849M/9.94G [01:42<16:05, 9.42MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▊         | 860M/9.94G [01:43<17:03, 8.88MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 870M/9.94G [01:44<17:20, 8.72MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 881M/9.94G [01:46<17:08, 8.82MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 891M/9.94G [01:47<16:45, 9.00MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 902M/9.94G [01:48<16:24, 9.19MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 912M/9.94G [01:49<16:07, 9.33MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 923M/9.94G [01:50<15:56, 9.43MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 933M/9.94G [01:51<15:47, 9.51MB/s][A
+Downloading (…)l-00001-of-00002.bin:   9%|▉         | 944M/9.94G [01:52<15:41, 9.56MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|▉         | 954M/9.94G [01:54<16:51, 8.89MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|▉         | 965M/9.94G [01:55<16:55, 8.84MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|▉         | 975M/9.94G [01:56<16:39, 8.98MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|▉         | 986M/9.94G [01:57<16:17, 9.17MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|█         | 996M/9.94G [01:58<15:55, 9.37MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|█         | 1.01G/9.94G [01:59<15:43, 9.47MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|█         | 1.02G/9.94G [02:00<15:31, 9.58MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|█         | 1.03G/9.94G [02:01<15:22, 9.66MB/s][A
+Downloading (…)l-00001-of-00002.bin:  10%|█         | 1.04G/9.94G [02:02<15:45, 9.42MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.05G/9.94G [02:04<16:30, 8.98MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.06G/9.94G [02:05<17:18, 8.56MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.07G/9.94G [02:07<18:21, 8.06MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.08G/9.94G [02:08<18:43, 7.89MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.09G/9.94G [02:09<18:51, 7.82MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.10G/9.94G [02:11<18:54, 7.79MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█         | 1.11G/9.94G [02:12<18:57, 7.76MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█▏        | 1.12G/9.94G [02:13<18:51, 7.79MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█▏        | 1.13G/9.94G [02:15<19:41, 7.46MB/s][A
+Downloading (…)l-00001-of-00002.bin:  11%|█▏        | 1.14G/9.94G [02:16<19:58, 7.34MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.15G/9.94G [02:18<19:39, 7.45MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.16G/9.94G [02:19<19:12, 7.62MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.17G/9.94G [02:20<18:50, 7.76MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.18G/9.94G [02:22<18:33, 7.87MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.20G/9.94G [02:23<18:19, 7.96MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.21G/9.94G [02:24<18:05, 8.05MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.22G/9.94G [02:25<17:41, 8.22MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.23G/9.94G [02:27<18:29, 7.85MB/s][A
+Downloading (…)l-00001-of-00002.bin:  12%|█▏        | 1.24G/9.94G [02:28<18:25, 7.88MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.25G/9.94G [02:29<17:59, 8.06MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.26G/9.94G [02:31<17:28, 8.28MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.27G/9.94G [02:32<17:15, 8.38MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.28G/9.94G [02:33<18:10, 7.94MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.29G/9.94G [02:35<18:03, 7.99MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.30G/9.94G [02:36<17:37, 8.17MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.31G/9.94G [02:37<17:28, 8.23MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.32G/9.94G [02:39<18:32, 7.75MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.33G/9.94G [02:40<18:51, 7.61MB/s][A
+Downloading (…)l-00001-of-00002.bin:  13%|█▎        | 1.34G/9.94G [02:41<18:52, 7.59MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▎        | 1.35G/9.94G [02:43<18:51, 7.59MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▎        | 1.36G/9.94G [02:44<19:05, 7.49MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.37G/9.94G [02:46<20:16, 7.04MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.38G/9.94G [02:47<20:14, 7.05MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.39G/9.94G [02:49<19:52, 7.17MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.41G/9.94G [02:50<20:20, 7.00MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.42G/9.94G [02:52<20:44, 6.85MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.43G/9.94G [02:53<20:23, 6.96MB/s][A
+Downloading (…)l-00001-of-00002.bin:  14%|█▍        | 1.44G/9.94G [02:55<19:54, 7.12MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▍        | 1.45G/9.94G [02:56<19:30, 7.26MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▍        | 1.46G/9.94G [02:58<19:12, 7.36MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▍        | 1.47G/9.94G [02:59<18:59, 7.44MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▍        | 1.48G/9.94G [03:00<18:37, 7.58MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▍        | 1.49G/9.94G [03:02<18:03, 7.80MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▌        | 1.50G/9.94G [03:03<18:26, 7.63MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▌        | 1.51G/9.94G [03:04<18:20, 7.67MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▌        | 1.52G/9.94G [03:06<17:49, 7.88MB/s][A
+Downloading (…)l-00001-of-00002.bin:  15%|█▌        | 1.53G/9.94G [03:07<17:14, 8.13MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.54G/9.94G [03:08<16:46, 8.34MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.55G/9.94G [03:09<16:24, 8.52MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.56G/9.94G [03:10<16:09, 8.65MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.57G/9.94G [03:12<15:57, 8.75MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.58G/9.94G [03:13<15:54, 8.76MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.59G/9.94G [03:14<16:42, 8.33MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.60G/9.94G [03:15<16:44, 8.30MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▌        | 1.61G/9.94G [03:17<16:25, 8.45MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▋        | 1.63G/9.94G [03:18<16:01, 8.65MB/s][A
+Downloading (…)l-00001-of-00002.bin:  16%|█▋        | 1.64G/9.94G [03:19<15:40, 8.83MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.65G/9.94G [03:20<15:25, 8.97MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.66G/9.94G [03:21<15:14, 9.06MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.67G/9.94G [03:22<15:03, 9.16MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.68G/9.94G [03:23<15:18, 9.00MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.69G/9.94G [03:25<16:04, 8.56MB/s][A
+Downloading (…)l-00001-of-00002.bin:  17%|█▋        | 1.70G/9.94G [03:26<16:00, 8.58MB/s][A
