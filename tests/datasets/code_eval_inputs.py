@@ -22,7 +22,7 @@ from composer.utils import dist, reproducibility
 
 def get_code_eval_inputs():
     dataset_uri = 'human_eval.jsonl'
-    num_fewshot = 1
+    num_fewshot = 0
     prompt_string = 'Please code:\n'
     num_evals = 1
 
