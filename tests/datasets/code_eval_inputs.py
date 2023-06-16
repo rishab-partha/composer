@@ -28,7 +28,7 @@ def get_code_eval_inputs():
 
     local_data = os.path.join(os.path.dirname(__file__), 'local_data')
 
-    tokenizer = AutoTokenizer.from_pretrained('huggyllama/llama-30b', trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained('huggyllama/llama-7b', trust_remote_code=True)
     dataset_uri = f'{local_data}/{dataset_uri}'
     batch_size = 4
     seqlen = 1024
