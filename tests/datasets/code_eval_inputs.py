@@ -20,7 +20,7 @@ from composer.models import HuggingFaceModel
 from composer.trainer import Trainer
 from composer.utils import dist, reproducibility
 
-def get_code_eval_inputs():
+def get_code_eval_inputs(tokenizer_name):
     dataset_uri = 'human_eval.jsonl'
     num_fewshot = 0
     prompt_string = 'Please code:\n'
@@ -28,7 +28,7 @@ def get_code_eval_inputs():
 
     local_data = os.path.join(os.path.dirname(__file__), 'local_data')
 
-    tokenizer = AutoTokenizer.from_pretrained('huggyllama/llama-7b', trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_name, trust_remote_code=True)
     dataset_uri = f'{local_data}/{dataset_uri}'
     batch_size = 4
     seqlen = 1024
