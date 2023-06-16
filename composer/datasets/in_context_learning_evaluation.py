@@ -1011,6 +1011,8 @@ class InContextLearningCodeEvalDataset(Dataset):
                 'do_sample': True,
                 #'eos_token_id': self.tokenizer.eos_token_id,
                 'top_p': 0.95,
+                'top_k': 40,
+                'temperature': 0.1,
                 'use_cache': True,
             }
         }

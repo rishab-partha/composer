@@ -516,6 +516,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
 
     def update(self, batch: Dict[str, Any], outputs: List[str], labels: List[str], remote: bool = False):
         del labels  # never used
+        print("Outputs: ", outputs)
         num_beams = batch['generation_kwargs']['num_beams']
         processed_outputs = [outputs[i * num_beams:(i + 1) * num_beams] for i in range(batch['input_ids'].shape[0])]
         for sample_outputs, sample_prompt, test, test_inputs, test_outputs, entry_point in zip(
@@ -525,14 +526,15 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
             for code_gen in sample_outputs:
                 print("Code gen: ", code_gen)
                 code_gen = re.split(r'\ndef|\nclass|\n#|\nif|\nprint|\nComplete', code_gen)[0]
-                print("Final code gen: ", code_gen)
+                #print("Final code gen: ", code_gen)
                 final_code = sample_prompt + code_gen
+                print("Final code:\n", final_code)
                 passes_all = True
                 if remote:
                     self.update_online_helper(final_code, test_inputs, test_outputs, entry_point)
                 else:
                     ret = multiprocessing.Value('b', 0)
-                    print(test)
+                    #print(test)
                     print("reached metric")
                     p = multiprocessing.Process(target=self.update_offline_helper,
                                                 args=(final_code, test_inputs[0], test_outputs[0], test, entry_point, ret))
@@ -572,10 +574,14 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
 
         try:
             exec(code_gen, mod.__dict__)
+            print("exec code generation successful")
             exec(test, mod.__dict__)
+            print("exec the test")
             mod.__dict__["check"](mod.__dict__[entry_point])
+            print("eval the test")
             val.value = 1
         except:
+            print("crashed")
             val.value = 0
         # try:
         #     print("before exec")
