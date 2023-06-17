@@ -23,7 +23,7 @@ from composer.utils import dist, reproducibility
 def get_code_eval_inputs(tokenizer_name, batch_size):
     dataset_uri = 'human_eval.jsonl'
     num_fewshot = 0
-    prompt_string = 'Please code:\n'
+    prompt_string = ''
     num_evals = 1
 
     local_data = os.path.join(os.path.dirname(__file__), 'local_data')
@@ -41,7 +41,7 @@ def get_code_eval_inputs(tokenizer_name, batch_size):
                                  num_fewshot=num_fewshot,
                                  prompt_string=prompt_string,
                                  example_delimiter='\n',
-                                 question_prelimiter='Complete the code: \n',
+                                 question_prelimiter='',
                                  destination_path=str(f'icl_{num_fewshot}.jsonl'),
                                  num_evals=num_evals)
     assert isinstance(dl, DataSpec)
