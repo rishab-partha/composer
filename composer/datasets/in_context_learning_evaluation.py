@@ -950,8 +950,8 @@ class InContextLearningCodeEvalDataset(Dataset):
                 ['input_ids']) > 1 and encoded_example['preamble']['input_ids'][-1] == self.tokenizer.eos_token_id:
                 encoded_example['preamble']['input_ids'] = encoded_example['preamble']['input_ids'][:-1]
 
-            encoded_example['prompt'] = self.tokenizer(ctxt, add_special_tokens=False)
-            encoded_example['prompt_text'] = self.samples[sample_idx]['prompt']
+            encoded_example['prompt'] = self.tokenizer(ctxt[:-1], add_special_tokens=False)
+            encoded_example['prompt_text'] = self.samples[sample_idx]['prompt'][:-1]
             encoded_example['task_id'] = self.samples[sample_idx]['task_id']
             encoded_example['canonical_solution'] = self.samples[sample_idx]['canonical_solution']
             encoded_example['test'] = self.samples[sample_idx]['test']
