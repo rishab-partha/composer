@@ -585,6 +585,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
                     if not client.invoke(payload):
                         passes_all = False
                         print(f'Failed test case: {test_input} -> {test_output}')
+                        print('Failed prompt!')
                         break
 
                     print(f'Passed test case: {test_input} -> {test_output}')
@@ -592,6 +593,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
 
                 if passes_all:
                     self.correct += torch.tensor(1.0)
+                    print('Passed all test cases!')
                     break
         client.close()  # pyright: ignore [reportOptionalMemberAccess]
 
