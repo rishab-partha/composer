@@ -573,6 +573,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
                 code_gen = re.split(r'\n[A-Za-z0-9#`]', code_gen)[0]  # remove everything after function ends
                 final_code = sample_prompt + code_gen  # combine prompt with the code generation
                 passes_all = True
+                print(f'Final code:\n{final_code}')
                 for test_input, test_output in zip(test_inputs, test_outputs):
                     payload = {
                         'code': final_code,
@@ -582,7 +583,11 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
                     }
                     if not client.invoke(payload):
                         passes_all = False
+                        print(f'Failed test case: {test_input} -> {test_output}')
                         break
+
+                    print(f'Passed test case: {test_input} -> {test_output}')
+
 
                 if passes_all:
                     self.correct += torch.tensor(1.0)
