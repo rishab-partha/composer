@@ -530,6 +530,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
             client = LocalEvalClient()
         elif os.environ['CODE_EVAL_DEVICE'] == 'LAMBDA':
             client = LambdaEvalClient()
+            print('Running code eval on Lambda.')
 
         else:
             raise Exception(
@@ -573,7 +574,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
                 code_gen = re.split(r'\n[A-Za-z0-9#`]', code_gen)[0]  # remove everything after function ends
                 final_code = sample_prompt + code_gen  # combine prompt with the code generation
                 passes_all = True
-                print(f'Final code:\n{final_code}')
+                print(f'\nFinal code:\n{final_code}')
                 for test_input, test_output in zip(test_inputs, test_outputs):
                     payload = {
                         'code': final_code,
