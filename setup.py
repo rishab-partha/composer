@@ -135,6 +135,8 @@ extra_deps['dev'] = [
     'cryptography==38.0.4',
     'pytest-httpserver>=1.0.4,<1.1',
     'setuptools<=59.5.0',
+    'sentence-transformers==2.2.2',
+    'textstat==0.7.3',
 ]
 
 extra_deps['health_checker'] = {
