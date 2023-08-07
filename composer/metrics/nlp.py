@@ -34,6 +34,9 @@ __all__ = [
     'LanguagePerplexity',
     'InContextLearningLMExpectedCalibrationError',
     'InContextLearningMCExpectedCalibrationError',
+    'InContextLearningToxicityMetric',
+    'InContextLearningRelevanceMetric',
+    'InContextLearningFleschKincaidMetric',
 ]
 
 

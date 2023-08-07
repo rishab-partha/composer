@@ -9,7 +9,8 @@ from composer.metrics.nlp import (BinaryF1Score, InContextLearningCodeEvalAccura
                                   InContextLearningLMExpectedCalibrationError,
                                   InContextLearningMCExpectedCalibrationError, InContextLearningMetric,
                                   InContextLearningMultipleChoiceAccuracy, InContextLearningQAAccuracy,
-                                  LanguageCrossEntropy, LanguagePerplexity, MaskedAccuracy)
+                                  LanguageCrossEntropy, LanguagePerplexity, MaskedAccuracy, InContextLearningToxicityMetric,
+                                  InContextLearningRelevanceMetric, InContextLearningFleschKincaidMetric)
 
 __all__ = [
     'MAP',
@@ -28,6 +29,9 @@ __all__ = [
     'InContextLearningLMExpectedCalibrationError',
     'InContextLearningMetric',
     'InContextLearningCodeEvalAccuracy',
+    'InContextLearningToxicityMetric',
+    'InContextLearningRelevanceMetric',
+    'InContextLearningFleschKincaidMetric',
 ]
 
 METRIC_DEFAULT_CTORS = {
@@ -35,4 +39,7 @@ METRIC_DEFAULT_CTORS = {
     'InContextLearningMultipleChoiceAccuracy': InContextLearningMultipleChoiceAccuracy,
     'InContextLearningQAAccuracy': InContextLearningQAAccuracy,
     'InContextLearningCodeEvalAccuracy': InContextLearningCodeEvalAccuracy,
+    'InContextLearningToxicityMetric': InContextLearningToxicityMetric,
+    'InContextLearningRelevanceMetric': InContextLearningRelevanceMetric,
+    'InContextLearningFleschKincaidMetric': InContextLearningFleschKincaidMetric,
 }
