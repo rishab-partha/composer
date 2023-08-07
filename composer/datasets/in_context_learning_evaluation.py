@@ -1336,7 +1336,7 @@ def build_icl_dataloader(
                                                  fewshot_random_seed=fewshot_random_seed)
         effective_batchsize = batch_size
     elif icl_task_type == 'model_based':
-        dataset = InContextLearningQATaskDataset(dataset_uri,
+        dataset = ModelBasedDataset(dataset_uri,
                                                  tokenizer,
                                                  max_seq_len,
                                                  pad_tok_id,
