@@ -9,8 +9,8 @@ from composer.metrics.nlp import (BinaryF1Score, InContextLearningCodeEvalAccura
                                   InContextLearningLMExpectedCalibrationError,
                                   InContextLearningMCExpectedCalibrationError, InContextLearningMetric,
                                   InContextLearningMultipleChoiceAccuracy, InContextLearningQAAccuracy,
-                                  LanguageCrossEntropy, LanguagePerplexity, MaskedAccuracy, InContextLearningToxicityMetric,
-                                  InContextLearningRelevanceMetric, InContextLearningFleschKincaidMetric)
+                                  LanguageCrossEntropy, LanguagePerplexity, MaskedAccuracy, InContextLearningToxicityAccuracy,
+                                  InContextLearningRelevanceAccuracy, InContextLearningFleschKincaidAccuracy)
 
 __all__ = [
     'MAP',
@@ -29,9 +29,9 @@ __all__ = [
     'InContextLearningLMExpectedCalibrationError',
     'InContextLearningMetric',
     'InContextLearningCodeEvalAccuracy',
-    'InContextLearningToxicityMetric',
-    'InContextLearningRelevanceMetric',
-    'InContextLearningFleschKincaidMetric',
+    'InContextLearningToxicityAccuracy',
+    'InContextLearningRelevanceAccuracy',
+    'InContextLearningFleschKincaidAccuracy',
 ]
 
 METRIC_DEFAULT_CTORS = {
@@ -39,7 +39,7 @@ METRIC_DEFAULT_CTORS = {
     'InContextLearningMultipleChoiceAccuracy': InContextLearningMultipleChoiceAccuracy,
     'InContextLearningQAAccuracy': InContextLearningQAAccuracy,
     'InContextLearningCodeEvalAccuracy': InContextLearningCodeEvalAccuracy,
-    'InContextLearningToxicityMetric': InContextLearningToxicityMetric,
-    'InContextLearningRelevanceMetric': InContextLearningRelevanceMetric,
-    'InContextLearningFleschKincaidMetric': InContextLearningFleschKincaidMetric,
+    'InContextLearningToxicityAccuracy': InContextLearningToxicityAccuracy,
+    'InContextLearningRelevanceAccuracy': InContextLearningRelevanceAccuracy,
+    'InContextLearningFleschKincaidAccuracy': InContextLearningFleschKincaidAccuracy,
 }

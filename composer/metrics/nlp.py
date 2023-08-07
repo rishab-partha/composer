@@ -34,9 +34,9 @@ __all__ = [
     'LanguagePerplexity',
     'InContextLearningLMExpectedCalibrationError',
     'InContextLearningMCExpectedCalibrationError',
-    'InContextLearningToxicityMetric',
-    'InContextLearningRelevanceMetric',
-    'InContextLearningFleschKincaidMetric',
+    'InContextLearningToxicityAccuracy',
+    'InContextLearningRelevanceAccuracy',
+    'InContextLearningFleschKincaidAccuracy',
 ]
 
 
@@ -606,7 +606,7 @@ class InContextLearningCodeEvalAccuracy(InContextLearningMetric):
         assert isinstance(self.total, Tensor)
         return self.correct / self.total
     
-class InContextLearningToxicityMetric(InContextLearningMetric):
+class InContextLearningToxicityAccuracy(InContextLearningMetric):
     r"""Computes accuracy for In-context learning (ICL) toxicity (QA) tasks.
 
     ICL QA tasks consist of some number of example generation tasks (referred to as the 'context'), followed by a generation task where the model must
@@ -647,7 +647,7 @@ class InContextLearningToxicityMetric(InContextLearningMetric):
         assert isinstance(self.total, Tensor)
         return self.total_value / self.total
     
-class InContextLearningRelevanceMetric(InContextLearningMetric):
+class InContextLearningRelevanceAccuracy(InContextLearningMetric):
     r"""Computes accuracy for In-context learning (ICL) relevance (QA) tasks.
 
     ICL QA tasks consist of some number of example generation tasks (referred to as the 'context'), followed by a generation task where the model must
@@ -686,7 +686,7 @@ class InContextLearningRelevanceMetric(InContextLearningMetric):
         assert isinstance(self.total, Tensor)
         return self.total_value / self.total
     
-class InContextLearningFleschKincaidMetric(InContextLearningMetric):
+class InContextLearningFleschKincaidAccuracy(InContextLearningMetric):
     r"""Computes accuracy for In-context learning (ICL) readability (QA) tasks.
 
     ICL QA tasks consist of some number of example generation tasks (referred to as the 'context'), followed by a generation task where the model must
@@ -713,7 +713,7 @@ class InContextLearningFleschKincaidMetric(InContextLearningMetric):
     def update(self, outputs: List[str], labels: List[str]):
         del labels
         for sample_output in outputs:
-            self.total_value += torch.tensor(textstat.textstat.flesch_reading_ease(sample_output))
+            self.total_value += torch.tensor(textstat.textstat.flesch_reading_ease(sample_output) / 100.0) # make 0 unreadable and 1 easily readable
             self.total += torch.tensor(1.0)
 
     def compute(self):
