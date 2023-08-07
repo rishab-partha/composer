@@ -16,7 +16,7 @@ from typing import TYPE_CHECKING, Any, Dict, List, Mapping, Optional, Tuple, Typ
 import torch
 from torchmetrics import Metric
 
-from composer.metrics import InContextLearningCodeEvalAccuracy, InContextLearningMetric
+from composer.metrics import InContextLearningCodeEvalAccuracy, InContextLearningMetric, InContextLearningRelevanceMetric  
 from composer.models.base import ComposerModel
 from composer.utils import MissingConditionalImportError, dist, get_file, import_object, is_model_fsdp, safe_torch_load
 
@@ -448,7 +448,8 @@ class HuggingFaceModel(ComposerModel):
 
     def update_metric(self, batch: Any, outputs: Any, metric: Metric) -> None:
         if (isinstance(metric, InContextLearningMetric) and batch.get('mode', None) == 'icl_task') or isinstance(
-                metric, InContextLearningCodeEvalAccuracy):
+                metric, InContextLearningCodeEvalAccuracy) or isinstance(
+                metric, InContextLearningRelevanceMetric):
             assert self.labels is not None
             metric.update(batch, outputs, self.labels)  # pyright: ignore [reportGeneralTypeIssues]
         else:
