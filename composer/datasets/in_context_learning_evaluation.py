@@ -1198,7 +1198,7 @@ class ModelBasedDataset(Dataset):
 
             max_answer_length = max(
                 max_answer_length,
-                len(self.tokenizer(self.samples[sample_idx['continuation']])['input_ids'])
+                len(self.tokenizer(self.samples[sample_idx]['continuation'])['input_ids'])
             )
 
         self.max_answer_length = max_answer_length
